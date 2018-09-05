@@ -13,5 +13,6 @@
 //= require jquery
 //= require rails-ujs
 //= require bootstrap-sprockets
+// = require jquery.noty.packaged.min.js
 //= require turbolinks
 //= require_tree .

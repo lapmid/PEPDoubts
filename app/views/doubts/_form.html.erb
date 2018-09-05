@@ -1,0 +1,56 @@
+
+
+
+ <%= form_with(model: doubt, local: true) do |form| %>
+  <form class="form-group">
+  <div class="container-fluid">
+                <% if doubt.errors.any? %>                  
+                    <h2><%= pluralize(doubt.errors.count, "error") %> prohibited this doubt from being saved:</h2>
+                    <% doubt.errors.full_messages.each do |message| %>
+                      <script type="text/javascript">
+                        noty({text: message, type: 'error', timeout: 5000, progressBar: true});
+                      </script>
+                    <% end %>
+              <% end %>
+  <div class="row">
+      <div class="col-md-8">
+          <%= form.label :question %>
+          <%= form.text_area :question,
+                        autofocus: true,
+                        required: true ,
+                        class: 'form-control question-box',
+                        placeholder: 'Question Link Or Description...' %>
+
+          <%= form.label :code %>
+          <pre>
+          <%= form.text_area :code,
+              autofocus: true,
+              class: 'form-control code-box',
+              placeholder: 'Paste Your Code Here...'  %>
+          </pre>
+      </div>
+
+      <div class="col-md-4">
+      <%= form.label :comment %>
+      <pre>
+      <%= form.text_area :comment,
+                    autofocus: true,
+                    class: 'form-control comment-box',
+                    placeholder: 'Any Comment Or Test Case...' %>
+      </pre>
+
+    
+      <%= form.label :contact %>
+      <%= form.text_field :contact,
+                    autofocus: true,
+                    required: true ,
+                    class: 'form-control',
+                    placeholder: 'Contact Number And Batch (e.g. 9887898776 18July)' %>
+      </div>
+  </div>
+  <%= form.submit "Submit", class: 'form-control login-button btn btn-success ' %>
+  <br><br>
+</div>
+
+</form>
+<% end %>

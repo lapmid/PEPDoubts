@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180903183206) do
+ActiveRecord::Schema.define(version: 20180904185712) do
+
+  create_table "doubts", force: :cascade do |t|
+    t.text "question"
+    t.text "code"
+    t.text "comment"
+    t.string "contact"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "main_pages", force: :cascade do |t|
     t.datetime "created_at", null: false

@@ -1,0 +1,20 @@
+<% item.each do |doubt| %>
+
+    
+    <div class="row well" style="margin:10">
+      <p style="color:#000"><%= doubt.contact %></p>
+        <div class="col-md-4">
+            <a><%= doubt.question %></a>
+        </div>
+
+        <pre class="col-md-4">
+            <%= doubt.comment %>
+        </pre>
+
+        <div class="col-md-4">
+          <%= link_to 'Show', doubt %>
+          <%= link_to 'Edit', edit_doubt_path(doubt) %>
+          <%= link_to 'Destroy', doubt, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+    </div>
+<% end %>

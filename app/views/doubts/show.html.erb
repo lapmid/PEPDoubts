@@ -1,0 +1,23 @@
+<div class="container-fluid">
+<p id="notice"><%= notice %></p>
+
+<div class="well">
+<a>
+  <%= @doubt.question %>
+</a>
+</div>
+
+<pre>
+ 
+  <%= @doubt.code %>
+</pre>
+
+<div class="well">
+  <%= @doubt.comment %>
+</div>
+
+<%= link_to 'Edit', edit_doubt_path(@doubt), :class  => "btn btn-primary" %> |
+<%= link_to 'Back', doubts_path , :class  => "btn btn-success"%>
+<br/>
+<br/>
+</div>
