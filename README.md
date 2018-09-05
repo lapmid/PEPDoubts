@@ -1,25 +1,10 @@
 # README
+A Web Application To Handle Doubts Of Students
+1. clone 
+2. run bundle install
+3. run rake db:migrate
+4. run rails s
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+thats it
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# PEPDoubts
