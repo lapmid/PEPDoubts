@@ -57,7 +57,7 @@ class DoubtsController < ApplicationController
   def destroy
     @doubt.destroy
     respond_to do |format|
-      format.html { redirect_to doubts_url, notice: 'Doubt was successfully destroyed.' }
+      format.html { redirect_to new_doubt_path, notice: 'Doubt was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
