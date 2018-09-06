@@ -29,7 +29,12 @@ class DoubtsController < ApplicationController
 
     respond_to do |format|
       if @doubt.save
-        format.html { redirect_to new_doubt_path, notice: 'Doubt was successfully Posted You Will Be Contacted Soon By Our Support Team.' }
+        
+        format.html { redirect_to new_doubt_path }
+        flash[:notice] = "Doubt was successfully Posted You Will Be Contacted Soon By Our Support Team."
+        flash[:success] = "If need Instant help Drop A Message With Your Name On Bottom Right Corner"
+
+
         format.json { render :new, status: :created, location: @doubt }
       else
         format.html { render :new }
